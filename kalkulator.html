@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kalkulator</h1>
+    <form action="">
+        <label for="number1" id="number">Masukan Angka : </label><br>
+    <input type="text" id="number1"><br>
+    <label for="number2" id="number">Masukan Angka : </label><br>
+    <input type="text" id="number2">
+    </form>
+    <tr>
+        <td>
+        <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+        <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+        <input class="tombol" type="button" onclick="kali()" value="  *  ">
+        <input class="tombol" type="button" onclick="bagi()" value="  /  ">
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>Hasil</td><td>:</td><br>
+        <td><input type="number" name="hasil" id="hasil"></td>
+    </tr><br>
+    <script>
+        function tambah(){
+            let number1 =parseFloat(document.getElementById('number1').value)
+            let number2 =parseFloat(document.getElementById('number2').value)
+            let hasil = number1+number2;
+            document.getElementById('hasil').value=hasil;
+        }
+        function kurang(){
+            let number1 =parseFloat(document.getElementById('number1').value)
+            let number2 =parseFloat(document.getElementById('number2').value)
+            let hasil = number1-number2;
+            document.getElementById('hasil').value=hasil;
+        }
+        function kali(){
+            let number1 =parseFloat(document.getElementById('number1').value)
+            let number2 =parseFloat(document.getElementById('number2').value)
+            let hasil = number1*number2;
+            document.getElementById('hasil').value=hasil;
+        }
+        function bagi(){
+            let number1 =parseFloat(document.getElementById('number1').value)
+            let number2 =parseFloat(document.getElementById('number2').value)
+            let hasil = number1/number2;
+            document.getElementById('hasil').value=hasil;
+        }
+    </script>
+</body>
+</html>
